@@ -1,0 +1,7 @@
+/* Styles for build in angular validation classes. To make form elements highlighted */
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+    border-color: #78FA89;
+}
