@@ -14,18 +14,9 @@
     </header>
     <!-- Store controler and store as alias for usage inside div-->
     <div class="list-group-item" ng-repeat="product in store.products | limitTo:3">
-        <h3>
-            {{product.name}}
-            <em class="pull-right">{{product.price | currency}}</em>
-        </h3>
+        <h3 product-title></h3>
         <button class="btn btn-success" ng-show="product.canPurchase">Add to cart</button>
-        <div class='gallery' ng-show="product.images.length">
-            <ul class="list-inline thumbs">
-                <li class="thumbnail" ng-repeat="image in product.images">
-                    <img ng-src="{{image.full}}" />
-                </li>
-            </ul>
-        </div>
+        <product-gallery></product-gallery>
         <section class="tab" ng-init="tab = 1" ng-controller="PanelController as panel">
             <ul class="nav nav-pills">
                 <li ng-class="{active:panel.isSelected(1)}">
